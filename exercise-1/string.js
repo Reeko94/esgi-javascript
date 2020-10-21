@@ -27,3 +27,7 @@ function leet(chaine) {
 function verlan(chaine) {
     return chaine.split(' ').map(w => w.split('').reverse().join('')).join(' ');
 }
+
+function yoda(chaine) {
+    return chaine.split(' ').reverse().join(' ');
+}
