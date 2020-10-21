@@ -23,3 +23,7 @@ function leet(chaine) {
     var voyelles = { "A": 4, "E": 3, "I": 1, "O": "0", "U": "(_)", "Y": 7 };
     return chaine.split('').map(letter => voyelles[letter.toUpperCase()] || letter).join('')
 }
+
+function verlan(chaine) {
+    return chaine.split(' ').map(w => w.split('').reverse().join('')).join(' ');
+}
