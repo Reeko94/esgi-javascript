@@ -7,3 +7,15 @@ function capitalize(chaine) {
     if (typeof chaine !== "string" || chaine === "") return "";
     return chaine.split(' ').map(c => c.charAt(0).toUpperCase() + c.slice(1)).join(' ');
 }
+
+function camelCase(chaine) {
+    if (typeof chaine !== "string" || chaine === "") return "";
+    return chaine.split(' ').map(c => c.charAt(0).toUpperCase() + c.slice(1)).join('');
+}
+
+function snake_case(chaine) {
+    if (typeof chaine !== "string" || chaine === "") return "";
+    return chaine.split(' ').map(c => c.charAt(0).toUpperCase() + c.slice(1)).join('_').toLowerCase();
+}
+
+console.log(camelCase('Bonjour toTo'))
