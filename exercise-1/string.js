@@ -20,8 +20,22 @@ function snake_case(chaine) {
 
 function leet(chaine) {
     if (typeof chaine !== "string" || chaine === "") return "";
-    var voyelles = { "A": 4, "E": 3, "I": 1, "O": "0", "U": "(_)", "Y": 7 };
-    return chaine.split('').map(letter => voyelles[letter.toUpperCase()] || letter).join('')
+    return chaine.replace(/[aeiouy]/gi, function($e) {
+        switch (e.toLowerCase()) {
+            case 'a':
+                return 4;
+            case 'e':
+                return 3;
+            case 'i':
+                return 1;
+            case 'o':
+                return 0;
+            case 'u':
+                return '(_)';
+            case 'y':
+                return 7;
+        }
+    });
 }
 
 function verlan(chaine) {
