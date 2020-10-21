@@ -5,7 +5,7 @@ function ucfirst(chaine) {
 
 function capitalize(chaine) {
     if (typeof chaine !== "string" || chaine === "") return "";
-    return chaine.split(' ').map(c => c.charAt(0).toUpperCase() + c.slice(1).toLowerCase()).join(' ');
+    return chaine.split(' ').map(word => ucfirst(word.toLowerCase())).join(' ');
 }
 
 function camelCase(chaine) {
@@ -32,4 +32,8 @@ function verlan(chaine) {
 function yoda(chaine) {
     if (typeof chaine !== "string" || chaine === "") return "";
     return chaine.split(' ').reverse().join(' ');
+}
+
+function prop_access(obj, string) {
+    string.split('.').map()
 }
