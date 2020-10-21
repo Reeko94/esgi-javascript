@@ -15,7 +15,7 @@ function camelCase(chaine) {
 
 function snake_case(chaine) {
     if (typeof chaine !== "string" || chaine === "") return "";
-    return chaine.split(' ').map(c => c.charAt(0).toUpperCase() + c.slice(1)).join('_').toLowerCase();
+    return chaine.toLowerCase().replace(/\W/g, '_');
 }
 
 function leet(chaine) {
